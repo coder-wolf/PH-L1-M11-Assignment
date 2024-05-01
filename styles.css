@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* ======================================== */
+/* ============== Sections ================ */
+/* ======================================== */
+
+/* 1. Nav */
+/* 2. Banner */
+/* 3. Popular Tours */
+/* 4. Destination */
+/* 5. Why choose us*/
+/* 6. Deals and discounts */
+/* 7. Video perfect place .. */
+/* 8. Newsletter */
+/* 9. Footer */
+
+/* ======================================== */
+/* ================= END ================== */
+/* ======================================== */
+
+/* 0. Global Style */
+
+* {
+    font-family: "Mulish", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    padding: 20px 115px;
+}
+
+h3 {
+    font-size: 32px;
+    color: black;
+    margin: 0px;
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 25px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    text-align: center;
+    color: rgba(19, 19, 24, 0.7);
+    font-size: 15px;
+    font-weight: normal;
+    max-width: 600px;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+section {
+    padding-top: 70px;
+}
+
+button {
+    background-color: #FF5400;
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+/* 1. Nav */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    gap: 20px;
+}
+
+.logo img {
+    object-fit: contain;
+}
+
+.logo h1 {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.orange-text {
+    color: #FF5400;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.navbar-items a {
+    color: black;
+    text-decoration: none;
+    color: #424247;
+}
+
+.navbar-items .selected {
+    color: #FF5400;
+    font-weight: 600;
+}
+
+
+/* 2. Banner */
+
+.banner {
+    padding-top: 20px;
+    position: relative;
+}
+
+/* This is the image shadow */
+.banner img::after {
+    content: "";
+    position: absolute;
+    inset: 0 -1px 5px 0;
+    border-radius: 15px;
+    box-shadow: inset 0 0 600px 100px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.banner-content .title {
+    color: white;
+    font-size: 45px;
+    font-weight: 800;
+}
+
+.banner-content .subtitle {
+    color: white;
+    padding: 0 250px;
+}
+
+.find-ticket {
+    background-color: rgba(255, 255, 255, 0.25);
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
+    padding: 0 12px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.find-ticket input,
+select {
+    margin: 10px 5px;
+    height: max-content;
+    border: none;
+    height: 41.5px;
+    width: 150px;
+    border-radius: 5px;
+    text-indent: 10px;
+    color: rgba(19, 19, 24, 0.5);
+}
+
+.find-ticket input::placeholder {
+    color: rgba(19, 19, 24, 0.5);
+}
+
+.find-ticket select {
+    padding-right: 10px;
+    /* appearance: none; */
+}
+
+.banner button {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.banner i {
+    color: white;
+    width: 20px;
+}
+
+/* 3. Popular Tours */
+
+.popular-tours {
+    display: flex;
+    gap: 50px;
+}
+
+.popular-tours h3 {
+    text-align: left;
+}
+
+button {
+    background-color: #FF5400;
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.popular-tours>.section-content {
+    color: rgba(19, 19, 24, 0.7);
+    line-height: 2;
+}
+
+
+
+/* 4. Destination */
+.destination {}
+
+.destination-card img {
+    height: 305px;
+}
+
+.destination-card {
+    position: relative;
+}
+
+.destination-name {
+    position: absolute;
+    /* top: 45%;
+    left: 35%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+}
+
+.destination-card:nth-child(n+3):nth-child(-n+5) img {
+    height: 290px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 25px; */
+    row-gap: 25px;
+    justify-content: space-between;
+}
+
+
+/* .gallery .destination-card img {
+    height: 290px;
+} */
+
+/* 5. Why choose us*/
+.why-choose-us .cards {}
+
+.why-card {
+    padding: 30px;
+    width: 520px;
+    /* background-color: red; */
+    border-radius: 15px;
+}
+
+.why-card img {
+    width: 60px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    width: 100%;
+}
+
+.container>.why-card:nth-child(3) {
+    grid-column: 1 / 3;
+    justify-self: center;
+}
+
+.container>.why-card:nth-child(2) {
+    margin-left: 10px;
+    /* Adjust this value to match the grid-gap */
+}
+
+#card-1 {
+    background-color: rgba(251, 181, 99, 0.05);
+    border: rgba(251, 181, 99, 0.2) solid;
+}
+
+#card-2 {
+    background-color: rgba(41, 206, 246, 0.05);
+    border: rgba(41, 206, 246, 0.2) solid;
+}
+
+#card-3 {
+    background-color: rgba(233, 68, 68, 0.05);
+    border: rgba(233, 68, 68, 0.2) solid;
+}
+
+/* 6. Deals and discounts */
+
+.deals {}
+
+.deals-card {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.deals-card-content {
+    position: absolute;
+    width: 450px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, .7);
+    backdrop-filter: blur(2px);
+    top: 50%;
+    right: 0;
+    transform: translate(-15%, -52%);
+    border-radius: 15px;
+    /* margin: 35px; */
+    padding: 50px;
+}
+
+.deals-card:nth-child(2n) .deals-card-content {
+    left: 0;
+    transform: translate(10%, -52%);
+}
+
+.deal-details {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.deal-detail-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.deal-detail-item-value {
+    color: red;
+}
+
+i {
+    color: #FF5400;
+}
+
+.deal-title {
+    margin: 20px 0;
+}
+
+.deal-price {
+    color: #FF5400;
+    font-weight: bold;
+    size: 40px;
+}
+
+/* 7. Video perfect place .. */
+.video-section {
+    display: flex;
+}
+
+.video-section-content {
+    padding-right: 35px;
+}
+
+.video-section-content ul {
+    font-weight: bold;
+}
+
+.video-section-content .content {
+    line-height: 1.8;
+}
+
+.video-section-content>.content>p,
+li {
+    margin-bottom: 15px;
+}
+
+.video-section button {
+    padding: 10px 40px;
+}
+
+.video-section-content>.content>ul {
+    padding-left: 4%;
+}
+
+.video-section-content>.content {
+    padding-bottom: 15px;
+}
+
+.video-section h3 {
+    text-align: left;
+    font-size: 35px;
+    max-width: 400px;
+    padding-bottom: 10px;
+}
+
+.video-thumbnail {
+    position: relative;
+}
+
+.video-thumbnail-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    max-width: 300px;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* 8. Newsletter */
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.newsletter-content {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 350px */
+    padding: 30px;
+    border-radius: 10px;
+    border: #FF5400 solid;
+    gap: 10px;
+}
+
+
+.newsletter-content p {
+    width: 90%;
+}
+
+.newsletter h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.newsletter-img {
+    position: relative;
+}
+
+.offer-overlay-card {
+    position: absolute;
+    background-color: #FF5400;
+    width: 260px;
+    height: 90px;
+    border-radius: 10px;
+    right: 1%;
+    bottom: 12%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotate(-20deg);
+}
+
+.offer-overlay-card h5 {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.offer-overlay-card h6 {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+
+hr {
+    width: 100%;
+    color: rgba(19, 19, 24, 0.1);
+    background-color: rgba(19, 19, 24, 0.1);
+    height: 1px;
+    border: none;
+}
+
+.newsletter {
+    padding-bottom: 80px;
+}
+
+.newsletter input,
+button {
+    /* margin: 5px 0; */
+    height: 45px;
+    border-radius: 5px;
+}
+
+.newsletter input {
+    background-color: rgba(19, 19, 24, 0.05);
+    border: none;
+    text-indent: 10px;
+    color: rgba(19, 19, 24, 0.3);
+    margin-bottom: 5px;
+}
+
+.newsletter button {
+    background-color: #FF5400;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* 9. Footer */
+
+footer {
+    height: 450px;
+    width: 100%;
+    background-color: rgba(19, 19, 24, 0.05);
+    padding: none;
+    margin: none;
+
+    display: grid;
+    place-items: center;
+    align-content: center;
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; */
+}
+
+footer .logo {}
+
+footer h5 {
+    max-width: 720px;
+    padding: 0;
+    padding-bottom: 25px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    /* padding: 20px; */
+}
+
+.social img {
+    padding: 5px;
+    height: 20px;
+}
+
+footer hr {
+    width: 58%;
+    color: rgba(19, 19, 24, 0.1);
+    margin: 40px 0;
+}
