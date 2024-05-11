@@ -76,6 +76,14 @@ button {
     justify-content: center;
 }
 
+
+
+@media screen and (max-width: 576px) {
+    main {
+        padding: 25px;
+    }
+}
+
 /* 1. Nav */
 nav {
     display: flex;
@@ -118,6 +126,49 @@ nav ul {
     font-weight: 600;
 }
 
+.mobile-hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+    nav {
+        /* flex-direction: row; */
+        /* justify-content: space-between; */
+        width: 100%;
+        padding: 2px 0;
+    }
+
+    .navbar-items {
+        display: none;
+    }
+
+    .mobile-hamburger {
+        display: contents;
+    }
+
+    .mobile-hamburger i {
+        color: black;
+    }
+
+    .logo {
+        gap: 10px;
+    }
+
+    .logo h1 {
+        font-size: 23px;
+        text-wrap: nowrap;
+        margin: 0;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+
+    .mobile-hamburger i {
+        font-size: 30px;
+    }
+
+}
 
 /* 2. Banner */
 
@@ -137,12 +188,14 @@ nav ul {
 
 .banner-content {
     position: absolute;
-    top: 20%;
-    left: 0;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
 }
 
 .banner-content .title {
@@ -200,6 +253,50 @@ select {
     width: 20px;
 }
 
+@media screen and (max-width: 576px) {
+    .banner img {
+        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 7/10;
+        border-radius: 20px;
+    }
+
+
+    .banner .title {
+        font-size: 30px;
+    }
+
+    .banner .subtitle {
+        padding: 0;
+
+    }
+
+    .banner-content {}
+
+    .banner .find-ticket {
+        flex-direction: column;
+        /* padding: 10px 20px; */
+        margin: auto;
+        padding: 10px;
+    }
+
+    .find-ticket * {
+        width: 300px;
+        height: 55px;
+    }
+
+    .find-ticket input {
+        width: 300px;
+        height: 55px;
+        align-items: center;
+    }
+
+    .find-ticket i {
+        height: auto;
+    }
+
+}
+
 /* 3. Popular Tours */
 
 .popular-tours {
@@ -226,7 +323,16 @@ button {
     line-height: 2;
 }
 
+@media screen and (max-width: 576px) {
+    .popular-tours {
+        flex-direction: column;
+    }
 
+    .popular-tours img {
+        object-fit: contain;
+        width: 100%;
+    }
+}
 
 /* 4. Destination */
 .destination {}
@@ -263,6 +369,12 @@ button {
     justify-content: space-between;
 }
 
+@media screen and (max-width: 576px) {
+    .destination-card img {
+        height: 100%;
+        width: 100%;
+    }
+}
 
 /* .gallery .destination-card img {
     height: 290px;
@@ -314,6 +426,19 @@ button {
     border: rgba(233, 68, 68, 0.2) solid;
 }
 
+@media screen and (max-width: 576px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        justify-content: center;
+    }
+
+    .why-card {
+        width: 100%;
+    }
+}
+
 /* 6. Deals and discounts */
 
 .deals {}
@@ -346,6 +471,7 @@ button {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    align-items: center;
 }
 
 .deal-detail-item {
@@ -371,6 +497,67 @@ i {
     color: #FF5400;
     font-weight: bold;
     size: 40px;
+}
+
+@media screen and (max-width: 576px) {
+    .deals-card img {
+        width: 100%;
+        aspect-ratio: 7/11;
+        object-fit: cover;
+        border-radius: 18px;
+    }
+
+    .deals-card-content {
+        width: 72.5%;
+        height: 51%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        transform: none;
+        top: 60%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .deals-card:nth-child(2n) .deals-card-content {
+        width: 72.5%;
+        height: 51%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        transform: none;
+        top: 60%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .deals-card-content p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .deal-details {
+        display: flex;
+        gap: 0;
+        column-gap: 20px;
+        overflow-wrap: break-word;
+        flex-wrap: wrap;
+    }
+
+    .deal-detail-item-value {
+        margin: 10px 0;
+    }
+
+    .deals-card-content {
+        padding: 20px;
+    }
+
 }
 
 /* 7. Video perfect place .. */
@@ -429,6 +616,27 @@ li {
     font-weight: 500;
     line-height: 1.5;
     text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+    .video-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .video-section-content {
+        padding: 0;
+    }
+
+    .video-thumbnail {
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    .video-section img {
+        width: 100%;
+        border-radius: 15px;
+    }
 }
 
 /* 8. Newsletter */
@@ -529,6 +737,23 @@ button {
     font-size: 15px;
 }
 
+@media screen and (max-width: 576px) {
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .newsletter-img img {
+        width: 100%;
+        aspect-ratio: 1;
+    }
+
+    .newsletter-img {
+        padding-top: 30px;
+    }
+}
+
 /* 9. Footer */
 
 footer {
@@ -571,4 +796,33 @@ footer hr {
     width: 58%;
     color: rgba(19, 19, 24, 0.1);
     margin: 40px 0;
+}
+
+@media screen and (max-width: 576px) {
+    footer .logo {
+        padding: 20px 0;
+    }
+
+    footer h5 {
+        max-width: 80%;
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    footer .social img {
+        height: 35px;
+    }
+
+    .social {
+        gap: 20px;
+    }
+
+    footer hr {
+        width: 90%;
+        margin: 25px 0;
+    }
+
+    .copyright {
+        font-size: 18px;
+    }
 }
